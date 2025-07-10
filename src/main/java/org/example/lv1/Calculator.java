@@ -8,6 +8,7 @@ public class Calculator {
     public static void main(String[] args) {
         Scanner scanner =  new Scanner(System.in);
 
+        // exit 전까지 무한 반복 while문 사용
         while(true) {
             // 양의 정수(0 포함)를 입력받기
             // 양의 정수는 각각 하나씩 전달 받기
@@ -29,7 +30,6 @@ public class Calculator {
             char operator = ' ';    // ''안에 공백 하나 넣어줘야 오류 안남(빈 문자 표현 x). 공백은 문자로 처리되기 때문임.
 
             // 사칙연산 기호(+, -, *, /)를 입력받기
-            // exit 전까지 무한 반복 while문 사용
             while (true) {
                 System.out.print("사칙연산 기호를 입력하세요(+, -, *, /): ");
 
