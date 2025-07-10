@@ -25,7 +25,7 @@ public class Calculator {
             }
 
             scanner.nextLine();     // 트러블슈팅: nextInt()는 숫자만 읽음. 엔터 안먹어서 charAt(0)에서 오류남. 라인 정리하는 게 해결책!
-            System.out.println();   // 깔끔하게 보게하기 위해 띄어쓰기 추가
+            System.out.println();   // 깔끔하게 보기 위해 띄어쓰기 추가
 
             char operator = ' ';    // 트러블슈팅: ''안에 공백 하나 넣어줘야 오류 안남(빈 문자 표현 x). 공백은 문자로 처리되기 때문임.
 
@@ -74,11 +74,11 @@ public class Calculator {
             }
 
             if(correct) {
-                System.out.println();   // 깔끔하게 보게하기 위해 띄어쓰기 추가
+                System.out.println();   // 깔끔하게 보기 위해 띄어쓰기 추가
                 System.out.println("결과: " + result);
             }
 
-            System.out.println();   // 깔끔하게 보게하기 위해 띄어쓰기 추가
+            System.out.println();   // 깔끔하게 보기 위해 띄어쓰기 추가
 
             // 반복문을 사용하되, 반복의 종료를 알려주는 “exit” 문자열을 입력하기 전까지 무한으로 계산을 진행할 수 있도록 소스 코드를 수정하기
             System.out.println("더 계산하시겠습니까? (exit 입력 시 종료)");
