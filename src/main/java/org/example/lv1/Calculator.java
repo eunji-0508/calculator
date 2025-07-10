@@ -24,10 +24,10 @@ public class Calculator {
                 continue;   // 다시 while문으로 돌아가서 반복
             }
 
-            scanner.nextLine();     // nextInt()는 숫자만 읽음. 엔터 안먹어서 charAt(0)에서 오류남. 라인 정리하는 게 해결책!
+            scanner.nextLine();     // 트러블슈팅: nextInt()는 숫자만 읽음. 엔터 안먹어서 charAt(0)에서 오류남. 라인 정리하는 게 해결책!
             System.out.println();   // 깔끔하게 보게하기 위해 띄어쓰기 추가
 
-            char operator = ' ';    // ''안에 공백 하나 넣어줘야 오류 안남(빈 문자 표현 x). 공백은 문자로 처리되기 때문임.
+            char operator = ' ';    // 트러블슈팅: ''안에 공백 하나 넣어줘야 오류 안남(빈 문자 표현 x). 공백은 문자로 처리되기 때문임.
 
             // 사칙연산 기호(+, -, *, /)를 입력받기
             while (true) {
@@ -36,7 +36,7 @@ public class Calculator {
                 // 사칙연산 기호를 적합한 타입으로 선언한 변수에 저장하기 (charAt(0))
                 // charAt(0) - 첫 문자만 꺼내겠다
                 // String operator =  scanner.next();
-                operator = scanner.nextLine().charAt(0);
+                operator = scanner.nextLine().charAt(0);    // 트러블슈팅
 
                 if(operator == '+' || operator == '-' || operator == '*' || operator == '/') {
                     break;
@@ -48,7 +48,7 @@ public class Calculator {
             // 위에서 입력받은 양의 정수 2개와 사칙연산 기호를 사용하여 연산을 진행한 후 결과값을 출력하기
             // switch문 사용
             int result = 0;     // 결과값 변수
-            boolean correct = true; // 오류일 때 결과 출력 안되게 추가한 변수
+            boolean correct = true; // 트러블슈팅: 오류일 때 결과 출력 안되게 추가한 변수
 
             switch (operator) {
                 case '+':
