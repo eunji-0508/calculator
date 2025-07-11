@@ -27,7 +27,7 @@ public class Calculator {
             scanner.nextLine();     // 트러블슈팅: nextInt()는 숫자만 읽음. 엔터 안먹어서 charAt(0)에서 오류남. 라인 정리하는 게 해결책!
             System.out.println();   // 깔끔하게 보기 위해 띄어쓰기 추가
 
-            char operator = ' ';    // 트러블슈팅: ''안에 공백 하나 넣어줘야 오류 안남(빈 문자 표현 x). 공백은 문자로 처리되기 때문임.
+            char operator;    // 트러블슈팅: ''안에 공백 하나 넣어줘야 오류 안남(빈 문자 표현 x). 공백은 문자로 처리되기 때문임. 없애도 되네!
 
             // 사칙연산 기호(+, -, *, /)를 입력받기
             while (true) {
