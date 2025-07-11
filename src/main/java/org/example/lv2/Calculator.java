@@ -54,7 +54,7 @@ public class Calculator {
     // 컬렉션의 가장 먼저 저장된 데이터를 삭제하는 기능
     // ArrayList는 순서 유지하기 때문에 첫번째 값 삭제할 수 있음
     // 트러블슈팅- IndexOutOfBoundsException
-    // 값 없는데 참조할 거라고 생각을 안함
+    // 값 없는데 참조할 거라고 생각을 안함 ex) 0으로 나누기
     public void removeFirstResult() {
         if (resultsList.isEmpty()) {
             System.out.println("저장된 데이터가 없습니다.");
