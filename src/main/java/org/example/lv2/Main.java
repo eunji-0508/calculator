@@ -19,7 +19,7 @@ public class Main {
             System.out.print("첫 번째 숫자를 입력하세요: ");
             int num1 = scanner.nextInt();
 
-            System.out.print("두 번째 숫자를 입력하세요: ");   // 여기서는 에러 안나는 이유: nextInt()는 숫자만 읽어서 엔터 알아서 버려짐.
+            System.out.print("두 번째 숫자를 입력하세요: ");
             int num2 = scanner.nextInt();
 
             if ((num1 < 0) || (num2 < 0)) {
@@ -27,10 +27,10 @@ public class Main {
                 continue;   // 다시 while문으로 돌아가서 반복
             }
 
-            scanner.nextLine();     // 트러블슈팅: nextInt()는 숫자만 읽음. 엔터 안먹어서 charAt(0)에서 오류남. 라인 정리하는 게 해결책!
+            scanner.nextLine();
             System.out.println();   // 깔끔하게 보기 위해 띄어쓰기 추가
 
-            char operator;    // 트러블슈팅: ''안에 공백 하나 넣어줘야 오류 안남(빈 문자 표현 x). 공백은 문자로 처리되기 때문임. 없애도 되네!
+            char operator;
 
             // 사칙연산 기호(+, -, *, /)를 입력받기
             while (true) {
@@ -39,7 +39,7 @@ public class Main {
                 // 사칙연산 기호를 적합한 타입으로 선언한 변수에 저장하기 (charAt(0))
                 // charAt(0) - 첫 문자만 꺼내겠다
                 // String operator =  scanner.next();
-                operator = scanner.nextLine().charAt(0);    // 트러블슈팅
+                operator = scanner.nextLine().charAt(0);
 
                 if (operator == '+' || operator == '-' || operator == '*' || operator == '/') {
                     break;
