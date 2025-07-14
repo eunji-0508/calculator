@@ -54,6 +54,7 @@ public class Main {
 
             calculator.getResult();
 
+            System.out.println();
             // 반복문을 사용하되, 반복의 종료를 알려주는 “exit” 문자열을 입력하기 전까지 무한으로 계산을 진행할 수 있도록 소스 코드를 수정하기
             System.out.println("더 계산하시겠습니까? (exit 입력 시 종료)");
             String answer = scanner.nextLine();
