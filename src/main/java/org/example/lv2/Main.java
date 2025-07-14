@@ -11,6 +11,7 @@ public class Main {
 
         Calculator calculator = new Calculator();
 
+        // 문자 등이 입력으로 들어왔을 때, 발생하는 오류 상황을 처리하지 않았다는 것을 뒤늦게 깨달아 구현하지 못하였다.
         // exit 전까지 무한 반복 while문 사용
         while (true) {
             // 양의 정수(0 포함)를 입력받기
