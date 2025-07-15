@@ -24,10 +24,10 @@ public class Calculator {
                 continue;   // 다시 while문으로 돌아가서 반복
             }
 
-            scanner.nextLine();     // 트러블슈팅: nextInt()는 숫자만 읽음. 엔터 안먹어서 charAt(0)에서 오류남. 라인 정리하는 게 해결책!
+            scanner.nextLine();     // 트러블슈팅: 라인 정리
             System.out.println();   // 깔끔하게 보기 위해 띄어쓰기 추가
 
-            char operator;    // 트러블슈팅: ''안에 공백 하나 넣어줘야 오류 안남(빈 문자 표현 x). 공백은 문자로 처리되기 때문임. 없애도 되네!
+            char operator;    // 트러블슈팅: 초기화
 
             // 사칙연산 기호(+, -, *, /)를 입력받기
             while (true) {
@@ -63,7 +63,7 @@ public class Calculator {
                     result = num1 * num2;
                     break;
 
-                // 연산 오류 발생할 경우 해당 오류에 대한 내용을 정제하여 출력함
+                // 연산 오류 발생할 경우 오류 처리
                 case '/':
                     if (num2 == 0) {
                         System.out.println("나눗셈 연산에서 분모(두번째 정수)에 0이 입력될 수 없습니다.");

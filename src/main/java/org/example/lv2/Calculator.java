@@ -9,7 +9,7 @@ import java.util.List;
 // 연산 결과를 저장하는 컬렉션 타입 필드를 가진 Calculator 클래스를 생성
 public class Calculator {
     // 속성(필드)
-    // 나중에 변환하게 되면 편하게 하기 위해 List로 작성함 (사실 지금은 상관없음)
+    // 나중에 변환하게 되면 편하게 하기 위해 List로 작성함
     private List<Integer> resultsList = new ArrayList<>();
 
     private int num1;
@@ -21,7 +21,6 @@ public class Calculator {
 
     // 기능
     // 사칙연산을 수행 후, 결과값 반환 메서드 구현
-    // 여기에는 매개변수 안줘도 되네
     public int calculate() {
         try {
             switch (operator) {
@@ -63,7 +62,7 @@ public class Calculator {
         }
     }
 
-    // 삭제되었는지 확인하는 메서드도 필요한가?
+    // 삭제되었는지 확인하는 메서드도 필요?
     // main 메서드에서 Calculator 클래스의 연산 결과를 저장하고 있는 컬렉션 필드에 직접 접근하지 못하도록 수정 (캡슐화)
     public List<Integer> getResultsList() {
         return new ArrayList<>(resultsList);

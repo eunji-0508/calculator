@@ -57,12 +57,12 @@ public enum OperatorType {
 
     // static 안쓰고는 구현할 방법이 없는 거 같은데..
     // values() - enum 자체 메서드. 모든 enum 상수들을 배열로 반환
-    public static OperatorType changeType(char operator) {
-        for (OperatorType operatorType : OperatorType.values()) {
-            if (operatorType.getOperator() == operator) {
-                return operatorType;
-            }
-        }
-        throw new IllegalArgumentException("잘못된 연산 기호입니다.");
-    }
+//    public static OperatorType changeType(char operator) {
+//        for (OperatorType operatorType : OperatorType.values()) {
+//            if (operatorType.getOperator() == operator) {
+//                return operatorType;
+//            }
+//        }
+//        throw new IllegalArgumentException("잘못된 연산 기호입니다.");
+//    }
 }
