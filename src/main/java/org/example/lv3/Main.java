@@ -30,8 +30,9 @@ public class Main {
             char operatorChar;
 
             System.out.print("사칙연산 기호를 입력하세요(+, -, *, /): ");
-            char operatorChar = scanner.nextLine().charAt(0);
+            operatorChar = scanner.nextLine().charAt(0);
 
+            OperatorType operator = OperatorType.changeType(operatorChar);
 
             calculator.setResult(num1, num2, operator);
 

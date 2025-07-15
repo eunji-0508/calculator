@@ -22,6 +22,47 @@ public enum OperatorType {
         return operator;
     }
 
+    // enum은 이미 객체를 가지고 있음
+    // enum TestEnum {
+    //    private char operator;
+    //    public char getOperator() {
+    //        return this.operator;
+    //    }
+    //    public TestEnum(char operator) {
+    //
+    //    }
+    //    TEST1('+'), TEST2('-')
+    //}
+    //TestEnum.TEST1.getOperator();
 
+    /// / 타입       //변수   // 값
+    //TestClass clazz = new TestClass();
+    //int        i    =  0;
+    //TestEnum test1 = TestEnum.TEST1;
+    //test1.getOperator();
+    //
+    //clazz.getValue();
+    //TestClass.getValue2();
+    //
+    //TestClass {
+    //    public void getValue() {
+    //
+    //    }
+    //
+    //    static void getValue2() {
+    //
+    //    }
+    //}
+
+
+    // static 안쓰고는 구현할 방법이 없는 거 같은데..
+    // values() - enum 자체 메서드. 모든 enum 상수들을 배열로 반환
+    public static OperatorType changeType(char operator) {
+        for (OperatorType operatorType : OperatorType.values()) {
+            if (operatorType.getOperator() == operator) {
+                return operatorType;
+            }
+        }
+        throw new IllegalArgumentException("잘못된 연산 기호입니다.");
+    }
 }
-
