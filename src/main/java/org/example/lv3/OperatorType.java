@@ -17,7 +17,11 @@ public enum OperatorType {
     OperatorType(char operator) {
         this.operator = operator;
     }
+
     public char getOperator() {
         return operator;
     }
+
+
 }
+

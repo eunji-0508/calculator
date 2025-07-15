@@ -12,9 +12,9 @@ public class Calculator <T extends Number> {
 
     // double 타입의 값을 전달 받아도 연산이 수행하도록 만들기 (제네릭)
     // 피연산자를 여러 타입으로 받을 수 있도록 기능을 확장
-    private T num1;
-    private T num2;
-    private OperatorType operator;
+     private T num1;
+     private T num2;
+     private OperatorType operator;
 
     // 트러블슈팅: T로 받으면 연산 못함
     // double형으로 받아주자
@@ -70,9 +70,9 @@ public class Calculator <T extends Number> {
     }
 
     // Setter 메서드
-    public void setResult(T num1, T num2, OperatorType operator) {
-        this.num1 = num1;
-        this.num2 = num2;
+    public <S> void setResult(S num1, S num2, OperatorType operator) {
+        this.num1 = (T)num1;
+        this.num2 = (T)num2;
         this.operator = operator;
     }
 

@@ -27,10 +27,11 @@ public class Main {
             scanner.nextLine();
             System.out.println();   // 깔끔하게 보기 위해 띄어쓰기 추가
 
-            OperatorType operator;
+            char operatorChar;
 
             System.out.print("사칙연산 기호를 입력하세요(+, -, *, /): ");
             char operatorChar = scanner.nextLine().charAt(0);
+
 
             calculator.setResult(num1, num2, operator);
 
